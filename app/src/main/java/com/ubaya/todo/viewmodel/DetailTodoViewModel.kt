@@ -11,7 +11,7 @@ import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 import kotlin.coroutines.CoroutineContext
 
-class DetailTodoViewModel(application:  Application)
+class DetailTodoViewModel(application:Application)
     :AndroidViewModel(application), CoroutineScope {
     private val job = Job()
 
