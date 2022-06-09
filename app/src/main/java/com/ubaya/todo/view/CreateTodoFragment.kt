@@ -9,10 +9,16 @@ import android.widget.RadioButton
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
+import androidx.work.OneTimeWorkRequestBuilder
+import androidx.work.WorkManager
+import androidx.work.workDataOf
 import com.ubaya.todo.R
+import com.ubaya.todo.Util.NotificationHelper
+import com.ubaya.todo.Util.TodoWorker
 import com.ubaya.todo.model.Todo
 import com.ubaya.todo.viewmodel.DetailTodoViewModel
 import kotlinx.android.synthetic.main.fragment_create_todo.*
+import java.util.concurrent.TimeUnit
 
 class CreateTodoFragment : Fragment() {
     private lateinit var viewModel:DetailTodoViewModel
