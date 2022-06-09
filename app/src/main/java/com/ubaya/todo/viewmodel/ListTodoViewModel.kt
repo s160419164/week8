@@ -41,7 +41,7 @@ class ListTodoViewModel (application:Application) :AndroidViewModel(application)
                 TodoDatabase::class.java, "newtododb").build()
             */
             val db = buildDb(getApplication())
-            db.todoDao().deleteTodo(todo)
+            db.todoDao().todoDone(todo.uuid)
             todoLD.value = db.todoDao().selectAllTodo()
         }
     }
